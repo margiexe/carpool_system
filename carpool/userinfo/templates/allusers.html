@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Provider Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+            color: #333;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h2>Provider Data</h2>
+    <table>
+        <tr>
+            <th>Serial No.</th>
+            <th>Name</th>
+            <th>Roll Number</th>
+            <th>Email</th>
+            <th>Days</th>
+            <th>Way</th>
+            <th>Area</th>
+        </tr>
+        {% for receiver in receiver_data %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ receiver.name }}</td>
+            <td>{{ receiver.roll_no }}</td>
+            <td>{{ receiver.email }}</td>
+            <td>{{ receiver.days }}</td>
+            <td>{{ receiver.way }}</td>
+            <td>{{ receiver.area }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

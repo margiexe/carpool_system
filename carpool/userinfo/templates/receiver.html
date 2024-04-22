@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="{% url 'receiver_allusers' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="">Name</label>
+        <input type="text" name="r_name"><br>
+        <label for="">Email</label>
+        <input type="email" name="r_email"><br>
+        <button id="button2">Submit</button>
+    </form>
+</body>
+</html>
